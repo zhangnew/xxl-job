@@ -142,7 +142,7 @@ public class JobLogController {
 			ReturnT<LogResult> logResult = executorBiz.log(new LogParam(triggerTime, logId, fromLineNum));
 
 			if (logResult.getContent()!=null && logResult.getContent().getLogContent()!=null) {
-                String logContent = logResult.getContent().getLogContent();
+				String logContent = logResult.getContent().getLogContent();
 				logResult.getContent().setLogContent(logContent.replaceAll("<", "&lt;"));
 			}
 
